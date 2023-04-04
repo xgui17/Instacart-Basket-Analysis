@@ -1,3 +1,3 @@
-# Instacart Market Basket Analysis
+# Instacart Analysis
 
-## Summary
+
