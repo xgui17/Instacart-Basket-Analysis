@@ -1,0 +1,58 @@
+{"0": {
+    "doc": "Home",
+    "title": "Instacart Market Basket Analysis",
+    "content": "Table of Contents . | Instacart Market Basket Analysis . | Table of Contents | Summary | Data Preprocessing | Exploratory Data Analysis . | Customer Behavior | Products | . | Business Suggestions | Future work | Appendix | . | . ",
+    "url": "/#instacart-market-basket-analysis",
+    
+    "relUrl": "/#instacart-market-basket-analysis"
+  },"1": {
+    "doc": "Home",
+    "title": "Summary",
+    "content": " ",
+    "url": "/#summary",
+    
+    "relUrl": "/#summary"
+  },"2": {
+    "doc": "Home",
+    "title": "Data Preprocessing",
+    "content": "The original datasets were obtained from Kaggle.There are five original datasets, which respectively contain information on order information, products purchased in each order, product information, department information and aisle information from Instacart, a grocery delivery service. During dataset joining, there seems to be a problem of mismatched numbers of rows between datasets, which may indicate many-to-one or duplicate issues. After investigating the unique values in datasets that contain department and aisle information, two departments and three aisles with repetitive ids and unreasonable names were dropped. It is more common to reach out to data providers when dealing with this kind of issue in practice, but here intuition works just fine since stores probably do not sell “illegal drugs” or “nuclear missiles”. There are also some messy entries of aisle names. Necessary actions have been done to clean up these data. | Original | Cleaned | . | 1_!ice68'_cream68'_toppings | ice cream toppings | . | 10_!bakery68'_desserts | bakery desserts | . Table 1: Example of Data Cleaning Process . ",
+    "url": "/#data-preprocessing",
+    
+    "relUrl": "/#data-preprocessing"
+  },"3": {
+    "doc": "Home",
+    "title": "Exploratory Data Analysis",
+    "content": "Customer Behavior . There are approximately 200k users, 3.2 million orders and 50k unique product offerings according to the dataset. As is demonstrated in Figure 1, the number of orders per user has a negative exponential distribution. Around 29% of users placed orders 1-5 times, about 25% of users placed orders 6-10 times, and no more than 9% of users had ordered more than 40 times. There is a peak at 99 orders per user, which may indicate potential data issues. Figure 1: Distribution of Number of Orders Per User . According to Figure 2,more than 34% of the orders are placed on day 0 and day 1, and about 72% of orders were placed during daytime hours (i.e. 9am to 5pm), which aligns with normal working hours. Note: This analysis assumes that day 0 is Saturday and day 1 is Sunday given that people tend to shop for groceries more on weekends. Another point to note is that day 2 has the most orders among the rest of the days. Such a phenomenon supports the above assumption of days of weeks because intuitively people are likely to shop for what they’ve missed in weekend shopping on Monday. Figure 2: Heatmap of Order Volume by Time . As for the number of products per order, Figure 3 indicates that over 62% of orders contain no more than 10 products, and less than 10% of orders have more than 20 items. Figure 3: Distribution of Order size . When looking closely at Figure 4, the distribution of the number of days customers placed their prior order, there seems to be a weekly user cycle since there’s a peak every seven days. There is a peak on day 30, which probably implies that the data maintainer aggregates any data larger than 30 into that bin. A follow up investigation is needed. Figure 4: Distribution of Day Since Prior Order . When comparing the distribution of order size among orders with different days since prior order in Figure 5, there seem to be more smaller-sized second orders placed on the same day than larger-sized ones, which indicates that most people may forget a thing or two and reordered on the same day. Furthermore, the median order sizes of the second order on the same day, within a week and within more than a week respectively are 5, 8 and 9, which aligns with the common knowledge that people tend to buy more things when placing a second order after a longer time interval. Figure 5: Probability Histogram of Second Order Size . Products . As for individual products, the most ordered product is banana.The top 20 products with highest volume percentages are all from the produce and dairy eggs departments. Produce and vegetables expire much quicker than the other product offerings and are more commonly in everyday dishes/meals which aligns with what we might expect. Out of the top 20 products, 14 are Organic (~75%). With the trend of moving towards more natural and healthy foods this is a good opportunity for the company to look more into. Among all the products, the most reordered ones are mostly food, drinks, and personal care items, which are the ones that get used up pretty quickly. | Product Name | Volume Percentages | Reorder Rate | . | Banana | 1.46% | 0.8435 | . | Bag of Organic Bananas | 1.17% | 0.8326 | . | Organic Strawberries | 0.82% | 0.7777 | . | Organic Baby Spinach | 0.75% | 0.7725 | . | Organic Hass Avocado | 0.66% | 0.7966 | . | Organic Avocado | 0.54% | 0.7581 | . | Large Lemon | 0.47% | 0.696 | . | Strawberries | 0.44% | 0.6982 | . | Limes | 0.43% | 0.681 | . | Organic Whole Milk | 0.43% | 0.8304 | . | Organic Raspberries | 0.42% | 0.7691 | . | Organic Yellow Onion | 0.35% | 0.6971 | . | Organic Garlic | 0.33% | 0.6801 | . | Organic Zucchini | 0.32% | 0.6884 | . | Organic Blueberries | 0.31% | 0.6288 | . | Cucumber Kirby | 0.3% | 0.6917 | . | Organic Fuji Apple | 0.27% | 0.7119 | . | Organic Lemon | 0.27% | 0.6899 | . | Apple Honeycrisp Organic | 0.26% | 0.7352 | . | Organic Grape Tomatoes | 0.26% | 0.6555 | . Table 2: Top 20 Best Selling Products With Reorder Rates . Figure 6: Department Reorder Rates . Figure 7: Aisle Reorder Rates . According to Figure 8, the department with the largest order volume is produce. The other category in the pie chart is made up of departments with less than 2% of total order volumes, which includes personal care, babies, international, alcohol, pets, missing, other and bulk. Figure 8: Pie Chart of Order Volume Percentage By Department . According to Figure 9, the single aisle with the largest order volume is fresh fruits. The aisles that are not among the top 15 ones with most order volumes are compiled into the other category due to space limitations. Figure 9: Pie Chart of Order Volume Percentage By Aisle . Figure 10: Treemap of Department and Aisles, sized by order volumes and colored by reorder rates . ",
+    "url": "/#exploratory-data-analysis",
+    
+    "relUrl": "/#exploratory-data-analysis"
+  },"4": {
+    "doc": "Home",
+    "title": "Business Suggestions",
+    "content": " ",
+    "url": "/#business-suggestions",
+    
+    "relUrl": "/#business-suggestions"
+  },"5": {
+    "doc": "Home",
+    "title": "Future work",
+    "content": " ",
+    "url": "/#future-work",
+    
+    "relUrl": "/#future-work"
+  },"6": {
+    "doc": "Home",
+    "title": "Appendix",
+    "content": " ",
+    "url": "/#appendix",
+    
+    "relUrl": "/#appendix"
+  },"7": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/",
+    
+    "relUrl": "/"
+  }
+}
