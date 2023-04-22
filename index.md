@@ -82,7 +82,7 @@ Looking closer at the individual subpopulations, it's worth noting that only abo
 <img src="assets/second_order_size_5.png" alt="Probability Histogram of Second Order Size" width="100%" height="450">
 <p style="text-align:center;font-size:70%;">Figure 5: Probability Density Histogram of Second Order Size relative to individual subpopulations. Orders are divided into three subpopulations by time since last order: “Same day” (`day_since_prior_order` = 0), “Within a week” (0 < `day_since_prior_order` <= 7), and “More than a week” (`day_since_prior_order` > 7). Distribution of order size of the subpopulations can be found in the <a href="#appendix">appendix</a>.</p>
 
-### Products
+### Product
 As for individual products, the most ordered product is banana.The top 20 products with highest volume percentages are all from the `produce` and `dairy eggs` departments. Produce and vegetables expire much quicker than the other product offerings and are more commonly in everyday dishes/meals which aligns with what might be expected. Among the top 20 products, 14 (~75%) are organic. Furthermore, organic products have higher reorder rates compared to non-organic products.
 
 **With the increasing trend towards natural and healthy foods, this presents a promising opportunity for the company to explore further. For instance, the company could enhance its promotion of organic products by increasing their visibility on its websites and apps.**

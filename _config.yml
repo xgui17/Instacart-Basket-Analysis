@@ -1,6 +1,7 @@
 title: Instacart Market Basket Analysis
 description: 
-theme: just-the-docs
+#theme: just-the-docs
+remote_theme: hydecorp/hydejack@v9
 
 url: https://xgui17.github.io/Instacart-Basket-Analysis/
 
