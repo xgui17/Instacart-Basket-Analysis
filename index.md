@@ -1,11 +1,11 @@
 ---
-title: Xiaoyu Gui Basket Analysis
+title: Instacart Market Basket Analysis
 layout: default
 ---
 
-<head>
+<!-- <head>
 	<title>Instacart Market Basket Analysis</title>
-</head>
+</head> -->
 
 # Instacart Market Basket Analysis
 
@@ -55,7 +55,7 @@ There are approximately 200k users, 3.2 million orders and 50k unique product of
 
 According to Figure 2, more than 34% of the orders are placed on day 0 and day 1, and about 72% of orders were placed during daytime hours (i.e. 9 AM to 5 PM), which aligns with normal working hours.
 
-Note: This analysis assumes that day 0 is Saturday and day 1 is Sunday given that people tend to shop for groceries more on weekends. Another point to note is that day 2 has the most orders among the rest of the days. Such a phenomenon supports the above assumption of days of weeks because intuitively people are likely to shop for what they’ve missed in weekend shopping on Monday. 
+Note: This analysis assumes that day 0 is Saturday and day 1 is Sunday given that people tend to shop for groceries more on weekends. Another point to note is that day 2 has the most orders among the rest of the days. Such a phenomenon supports the above assumption of days of weeks because intuitively people are likely to shop for what they’ve missed in weekend shopping on Monday. <u>A follow up with data providers would still be helpful.</u>
 
 **Therefore, it is recommended that the company increase the delivery fee during peak hours, specifically from 9 AM to 5 PM on weekends, to ensure an adequate number of available drivers. Such an approach would guarantee timely order deliveries and  increase customer satisfaction and loyalty.**
 
@@ -223,14 +223,15 @@ The treemap below (Figure 10) provides a visual representation of order volumes 
 
 ## Future work
 The questions that require follow up with the data providers include the following:
-- Improvement to data quality:
+
+Improvement to data quality:
 <ul>
   <li>Which specific days of week do the numbers in the dataset correspond to?</li>
   <li>Under what mechanism is a product classified into the missing department or aisle?</li>
   <li>Regarding the unusual peak on day 30 in the distribution of days since prior order, is any data larger than 30 recorded as 30?</li>
 </ul>
 
-- Extra information:
+Extra information:
 <ul>
   <li>Can other data on revenue and time series be provided?</li>
 </ul>
@@ -251,4 +252,4 @@ With these questions answered, it is possible to further enhance the insights pr
 <p style="text-align:center;font-size:70%;">Figure 14: Size of Second Order - Within a week</p>
 
 <iframe src="assets/size_sub3_15" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 15: Size of Second Order - More than a week</p>
+<p width=70% style="font-size:90%;">Figure 15: Size of Second Order - More than a week</p>
