@@ -29,7 +29,7 @@ The original datasets were obtained from Kaggle.There are five original datasets
 During dataset joining, there seems to be a problem of mismatched numbers of rows between datasets, which may indicate many-to-one or duplicate issues. After investigating the unique values in datasets that contain department and aisle information, two departments and three aisles with repetitive ids and unreasonable names were dropped. It is more common to reach out to data providers when dealing with this kind of issue in practice, but here intuition works just fine since stores probably do not sell “illegal drugs” or “nuclear missiles”.
 <br/><br/>
 There are also some messy entries of aisle names. Necessary actions have been done to clean up these data.
-<table width=70% style="margin-left:auto;margin-right:auto;">
+<table style="margin-left:auto;margin-right:auto;width=70%;">
   <tr>
     <th>Original</th>
     <th>Cleaned</th>
@@ -87,7 +87,7 @@ As for individual products, the most ordered product is banana.The top 20 produc
 
 **With the increasing trend towards natural and healthy foods, this presents a promising opportunity for the company to explore further. For instance, the company could enhance its promotion of organic products by increasing their visibility on its websites and apps.**
 
-<table width=70% style="margin-left:auto;margin-right:auto;">
+<table style="margin-left:auto;margin-right:auto;width=70%;">
   <tr>
     <th style="text-align: center">Product Name</th>
     <th style="text-align: center">Volume Percentages</th>
@@ -238,7 +238,7 @@ Extra information:
 
 With these questions answered, it is possible to further enhance the insights provided above.
 
-<h2 id="appendix">Appendix</h2>
+## Appendix
 <iframe src="assets/dow_bar_11" id="treemap" width="100%" height=530  frameBorder=0></iframe>
 <p style="text-align:center;font-size:70%;">Figure 11: Distribution of Orders by Day of Week</p>
 
@@ -252,4 +252,4 @@ With these questions answered, it is possible to further enhance the insights pr
 <p style="text-align:center;font-size:70%;">Figure 14: Size of Second Order - Within a week</p>
 
 <iframe src="assets/size_sub3_15" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p width=70% style="font-size:90%;">Figure 15: Size of Second Order - More than a week</p>
+<p style="font-size:90%;width:70%;">Figure 15: Size of Second Order - More than a week</p>
