@@ -16,8 +16,8 @@ layout: default
 ## Summary and Business Recommendations
 
 <ol>
-  <li>Order volumes are considerably higher during daytime hours on weekends (9 AM to 5 PM). Therefore, it is recommended that the company allocate more drivers during these peak hours by adjusting delivery fees. This would ensure sufficient driver availability and timely order deliveries, leading to increased customer satisfaction and loyalty.</li>
-  <li>The majority of orders (~48%) are placed more than 7 days after the customer's last order.To encourage more frequent purchase, it is suggested that the company utilize targeted strategies to increase customer loyalty and drive repeat business. For example, coupons, discounts and free shipping can be offered to customers whose second order exceeds a certain amount within a week. </li>
+  <li>Order volumes are considerably higher during daytime hours on weekends (9 AM to 5 PM). Therefore, it is recommended that the company allocates more drivers during these peak hours by adjusting delivery fees. This would ensure sufficient driver availability and timely order deliveries, leading to increased customer satisfaction and loyalty.</li>
+  <li>The majority of orders (~48%) are placed more than 7 days after the customer's last order.To encourage more frequent purchase, it is suggested that the company utilizes targeted strategies to increase customer loyalty and drive repeat business. For example, coupons, discounts and free shipping can be offered to customers whose second order exceeds a certain amount within a week. </li>
   <li>Among the top 20 products, 14 (~75%) are organic. Organic products also have higher reorder rates compared to non-organic products. Given the growing demand for healthier food options, the company should consider increasing the visibility of organic products across its websites and mobile applications.</li>
   <li>The company may consider building a dynamic dashboard based on the treemap (<a href="#treemap">Figure 10</a>) with regular updates. It can facilitate ongoing monitoring of overall sales conditions, streamline data storage and analysis, and improve decision making efficiency.</li>
 </ol>
@@ -44,7 +44,7 @@ There are also some messy entries of aisle names. Necessary actions have been do
   </tr>
 </table>
 <p style="font-size:85%;text-align:center;">Table 1: Example of Data Cleaning Process</p>
-<br/><br/>
+
 
 ## Exploratory Data Analysis 
 ### Customer Behavior 
@@ -80,7 +80,7 @@ Looking closer at the individual subpopulations, it's worth noting that only abo
 **As a result, to encourage customers who place orders more than a week apart to shift into the "within a week" category, it is recommended that marketing, sales, and other relevant departments collaborate to develop targeted strategies. One approach could be to offer coupons, discounts, or free shipping for customers whose second order exceeds a certain amount within a week.**
 
 <img src="assets/second_order_size_5.png" alt="Probability Histogram of Second Order Size" width="100%" height="450">
-<p style="font-size:85%;">Figure 5: Probability Density Histogram of Second Order Size relative to individual subpopulations. Orders are divided into three subpopulations by time since last order: “Same day” (`day_since_prior_order` = 0), “Within a week” (0 < `day_since_prior_order` <= 7), and “More than a week” (`day_since_prior_order` > 7). Distribution of order size of the subpopulations can be found in the <a href="#appendix">appendix</a>.</p>
+<p style="font-size:85%;">Figure 5: Probability Density Histogram of Second Order Size relative to individual subpopulations. Orders are divided into three subpopulations by time since last order: “Same day” (<code>day_since_prior_order</code> = 0), “Within a week” (0 < <code>day_since_prior_order</code> <= 7), and “More than a week” (<code>day_since_prior_order</code> > 7). Distribution of order size of the subpopulations can be found in the <a href="#appendix">appendix</a>.</p>
 
 ### Product
 As for individual products, the most ordered product is banana.The top 20 products with highest volume percentages are all from the `produce` and `dairy eggs` departments. Produce and vegetables expire much quicker than the other product offerings and are more commonly in everyday dishes/meals which aligns with what might be expected. Among the top 20 products, 14 (~75%) are organic. Furthermore, organic products have higher reorder rates compared to non-organic products.
@@ -215,7 +215,7 @@ According to Figure 9, the single aisle with the largest order volume is `fresh 
 <iframe src="assets/order_aisle_pie_9" width="100%" height=530  frameBorder=0></iframe>
 <p style="font-size:85%;text-align:center;">Figure 9: Pie Chart of Order Volume Percentage By Aisle</p>
 
-The treemap below (Figure 10) provides a visual representation of order volumes and reorder rates across various departments and aisles, using size and color to convey information. **To facilitate ongoing monitoring of overall sales conditions, the company may consider transforming this treemap into a dynamic dashboard that can be accessed by product managers and other senior staff.**
+The treemap below (Figure 10) provides a visual representation of order volumes and reorder rates across various departments and aisles, using size and color to convey information. **To facilitate ongoing monitoring of overall sales conditions, the company may consider transforming this treemap into a dynamic dashboard that can be accessed by product managers and other senior staff. Implementing this approach can also help optimize data storage and analysis as well as enhance the efficiency of decision-making process.**
 
 <iframe src="assets/treemap_10" id="treemap" width="100%" height=530  frameBorder=0></iframe>
 <p style="font-size:90%;">Figure 10: Treemap of Department and Aisles, sized by order volumes and colored by reorder rates. More detailed data can be found by hovering over the cells.</p>
