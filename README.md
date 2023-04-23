@@ -1,6 +1,13 @@
 # Instacart Market Basket Analysis
 
-## Summary
+### Introduction
+
+This data analysis project was conducted by Xiaoyu Gui, a student at the University of California, San Diego, and mentored by Michael Metter. The project is based on data obtained from <a href="https://www.kaggle.com/c/instacart-market-basket-analysis">Kaggle</a> and focuses on deriving business insights from the provided data. The project is showcased on a <a href="https://xgui17.github.io/Instacart-Basket-Analysis/">website</a>, which was maintained by Xiaoyu Gui.
+
+
+### Summary
+
+Below are some noteworthy results from the project. These insights are further detailed and visualized on the <a href="https://xgui17.github.io/Instacart-Basket-Analysis/">project website</a>. 
 
 <ol>
   <li>Order volumes are considerably higher during daytime hours on weekends (9 AM to 5 PM). Therefore, it is recommended that the company allocate more drivers during these peak hours by adjusting delivery fees. This would ensure sufficient driver availability and timely order deliveries, leading to increased customer satisfaction and loyalty.</li>
@@ -9,4 +16,3 @@
   <li>The company may consider building a dynamic dashboard based on the treemap with regular updates. It can facilitate ongoing monitoring of overall sales conditions, streamline data storage and analysis, and improve decision making efficiency.</li>
 </ol>
 
-More information can be found on the <a href="https://xgui17.github.io/Instacart-Basket-Analysis/">website</a>.

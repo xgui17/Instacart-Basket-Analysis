@@ -29,7 +29,7 @@ The original datasets were obtained from Kaggle.There are five original datasets
 During dataset joining, there seems to be a problem of mismatched numbers of rows between datasets, which may indicate many-to-one or duplicate issues. After investigating the unique values in datasets that contain department and aisle information, two departments and three aisles with repetitive ids and unreasonable names were dropped. It is more common to reach out to data providers when dealing with this kind of issue in practice, but here intuition works just fine since stores probably do not sell “illegal drugs” or “nuclear missiles”.
 <br/><br/>
 There are also some messy entries of aisle names. Necessary actions have been done to clean up these data.
-<table style="margin-left:auto;margin-right:auto;width=70%;">
+<table style="width:70%;margin:auto;">
   <tr>
     <th>Original</th>
     <th>Cleaned</th>
@@ -43,7 +43,7 @@ There are also some messy entries of aisle names. Necessary actions have been do
     <td>bakery desserts</td>
   </tr>
 </table>
-<p style="text-align:center;font-size:70%;">Table 1: Example of Data Cleaning Process</p>
+<p style="font-size:90%;width:70%;text-align:center;">Table 1: Example of Data Cleaning Process</p>
 <br/><br/>
 
 ## Exploratory Data Analysis 
@@ -51,7 +51,7 @@ There are also some messy entries of aisle names. Necessary actions have been do
 There are approximately 200k users, 3.2 million orders and 50k unique product offerings according to the dataset. As is demonstrated in Figure 1, the number of orders per user has a negative exponential distribution. Around 29% of users placed orders 1-5 times, about 25% of users placed orders 6-10 times, and no more than 9% of users had ordered more than 40 times. There is a peak at 99 orders per user, which may indicate potential data issues.
 
 <iframe src="assets/num_orders_per_user_1" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 1: Distribution of Number of Orders Per User</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 1: Distribution of Number of Orders Per User</p>
 
 According to Figure 2, more than 34% of the orders are placed on day 0 and day 1, and about 72% of orders were placed during daytime hours (i.e. 9 AM to 5 PM), which aligns with normal working hours.
 
@@ -60,17 +60,17 @@ Note: This analysis assumes that day 0 is Saturday and day 1 is Sunday given tha
 **Therefore, it is recommended that the company increase the delivery fee during peak hours, specifically from 9 AM to 5 PM on weekends, to ensure an adequate number of available drivers. Such an approach would guarantee timely order deliveries and  increase customer satisfaction and loyalty.**
 
 <iframe src="assets/dow_tod_heatmap_2" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 2: Heatmap of Order Volume by Day of Week and Time of Day</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 2: Heatmap of Order Volume by Day of Week and Time of Day</p>
 
 As for the number of products per order, Figure 3 indicates that over 62% of orders contain no more than 10 products, and less than 10% of orders have more than 20 items.
 
 <iframe src="assets/order_size_hist_3" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 3: Distribution of Order size</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 3: Distribution of Order size</p>
 
 When looking closely at Figure 4, the distribution of the number of days customers placed their prior order, there seems to be a weekly user cycle since there’s a peak every seven days. <u>There is a peak on day 30, which probably implies that the data maintainer aggregates any data larger than 30 into that bin. A follow up investigation is needed.</u>
 
 <iframe src="assets/day_since_prior_order_4" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 4: Distribution of Day Since Prior Order</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 4: Distribution of Day Since Prior Order</p>
 
 
 When comparing the distribution of order size across subpopulations with varying time intervals since the prior order, as shown in Figure 5, there seem to be more small-sized second orders placed on the same day, which indicates that people who reordered on the same day may just forget a thing or two.
@@ -80,14 +80,14 @@ Looking closer at the individual subpopulations, it's worth noting that only abo
 **As a result, to encourage customers who place orders more than a week apart to shift into the "within a week" category, it is recommended that marketing, sales, and other relevant departments collaborate to develop targeted strategies. One approach could be to offer coupons, discounts, or free shipping for customers whose second order exceeds a certain amount within a week.**
 
 <img src="assets/second_order_size_5.png" alt="Probability Histogram of Second Order Size" width="100%" height="450">
-<p style="text-align:center;font-size:70%;">Figure 5: Probability Density Histogram of Second Order Size relative to individual subpopulations. Orders are divided into three subpopulations by time since last order: “Same day” (`day_since_prior_order` = 0), “Within a week” (0 < `day_since_prior_order` <= 7), and “More than a week” (`day_since_prior_order` > 7). Distribution of order size of the subpopulations can be found in the <a href="#appendix">appendix</a>.</p>
+<p style="font-size:90%;width:70%;">Figure 5: Probability Density Histogram of Second Order Size relative to individual subpopulations. Orders are divided into three subpopulations by time since last order: “Same day” (`day_since_prior_order` = 0), “Within a week” (0 < `day_since_prior_order` <= 7), and “More than a week” (`day_since_prior_order` > 7). Distribution of order size of the subpopulations can be found in the <a href="#appendix">appendix</a>.</p>
 
 ### Product
 As for individual products, the most ordered product is banana.The top 20 products with highest volume percentages are all from the `produce` and `dairy eggs` departments. Produce and vegetables expire much quicker than the other product offerings and are more commonly in everyday dishes/meals which aligns with what might be expected. Among the top 20 products, 14 (~75%) are organic. Furthermore, organic products have higher reorder rates compared to non-organic products.
 
 **With the increasing trend towards natural and healthy foods, this presents a promising opportunity for the company to explore further. For instance, the company could enhance its promotion of organic products by increasing their visibility on its websites and apps.**
 
-<table style="margin-left:auto;margin-right:auto;width=70%;">
+<table style="width:70%;margin:auto;">
   <tr>
     <th style="text-align: center">Product Name</th>
     <th style="text-align: center">Volume Percentages</th>
@@ -195,30 +195,30 @@ As for individual products, the most ordered product is banana.The top 20 produc
   </tr>
 </table>
 
-<p style="text-align:center;font-size:70%;">Table 2: Top 20 Best Selling Products With Reorder Rates</p>
+<p style="font-size:90%;width:70%;text-align:center;">Table 2: Top 20 Best Selling Products With Reorder Rates</p>
 
 In Figure 6 and Figure 7, the most reordered ones are mostly food, drinks, and personal care items, which are the ones that get used up pretty quickly.
 
 <iframe src="assets/dept_reorder_6" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 6: Department Reorder Rates</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 6: Department Reorder Rates</p>
 
 <iframe src="assets/aisle_reorder_7" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 7: Aisle Reorder Rates</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 7: Aisle Reorder Rates</p>
 
 According to Figure 8, the department with the largest order volume is `produce`. The `other` category in the pie chart is made up of departments with less than 2% of total order volumes, which includes `personal care`, `babies`, `international`, `alcohol`, `pets`, `missing`, `other` and `bulk`. 
 
 <iframe src="assets/order_dept_pie_8" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 8: Pie Chart of Order Volume Percentage By Department</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 8: Pie Chart of Order Volume Percentage By Department</p>
 
 According to Figure 9, the single aisle with the largest order volume is `fresh fruits`. The aisles that are not among the top 15 ones with most order volumes are compiled into the `other` category due to space limitations. 
 
 <iframe src="assets/order_aisle_pie_9" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 9: Pie Chart of Order Volume Percentage By Aisle</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 9: Pie Chart of Order Volume Percentage By Aisle</p>
 
 The treemap below (Figure 10) provides a visual representation of order volumes and reorder rates across various departments and aisles, using size and color to convey information. **To facilitate ongoing monitoring of overall sales conditions, the company may consider transforming this treemap into a dynamic dashboard that can be accessed by product managers and other senior staff.**
 
 <iframe src="assets/treemap_10" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 10: Treemap of Department and Aisles, sized by order volumes and colored by reorder rates. More detailed data can be found by hovering over the cells.</p>
+<p style="font-size:90%;width:70%;">Figure 10: Treemap of Department and Aisles, sized by order volumes and colored by reorder rates. More detailed data can be found by hovering over the cells.</p>
 
 
 ## Future work
@@ -240,16 +240,16 @@ With these questions answered, it is possible to further enhance the insights pr
 
 ## Appendix
 <iframe src="assets/dow_bar_11" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 11: Distribution of Orders by Day of Week</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 11: Distribution of Orders by Day of Week</p>
 
 <iframe src="assets/tod_bar_12" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 12: Distribution of Orders by Time of Day</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 12: Distribution of Orders by Time of Day</p>
 
 <iframe src="assets/size_sub1_13" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 13: Size of Second Order - Same day</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 13: Size of Second Order - Same day</p>
 
 <iframe src="assets/size_sub2_14" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p style="text-align:center;font-size:70%;">Figure 14: Size of Second Order - Within a week</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 14: Size of Second Order - Within a week</p>
 
 <iframe src="assets/size_sub3_15" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p style="font-size:90%;width:70%;">Figure 15: Size of Second Order - More than a week</p>
+<p style="font-size:90%;width:70%;text-align:center;">Figure 15: Size of Second Order - More than a week</p>
