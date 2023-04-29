@@ -1,6 +1,6 @@
 ---
 title: Instacart Market Basket Analysis
-layout: default
+layout: minimal
 ---
 
 <!-- <head>
