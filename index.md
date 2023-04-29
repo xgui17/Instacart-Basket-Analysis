@@ -3,28 +3,30 @@ title: Instacart Market Basket Analysis
 layout: minimal
 ---
 
-<!-- <head>
-	<title>Instacart Market Basket Analysis</title>
-</head> -->
+# 🛒 Instacart Market Basket Analysis 
+{:.no_toc}
 
-# Instacart Market Basket Analysis
 
-### Table of Contents
-* TOC
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
 {:toc}
+
+---
 
 ## Summary and Business Recommendations
 
 <ol>
-  <li>Order volumes are considerably higher during daytime hours on weekends (9 AM to 5 PM). Therefore, it is recommended that the company allocates more drivers during these peak hours by adjusting delivery fees. This would ensure sufficient driver availability and timely order deliveries, leading to increased customer satisfaction and loyalty.</li>
-  <li>The majority of orders (~48%) are placed more than 7 days after the customer's last order.To encourage more frequent purchase, it is suggested that the company utilizes targeted strategies to increase customer loyalty and drive repeat business. For example, coupons, discounts and free shipping can be offered to customers whose second order exceeds a certain amount within a week. </li>
-  <li>Among the top 20 products, 14 (~75%) are organic. Organic products also have higher reorder rates compared to non-organic products. Given the growing demand for healthier food options, the company should consider increasing the visibility of organic products across its websites and mobile applications.</li>
-  <li>The company may consider building a dynamic dashboard based on the treemap (<a href="#treemap">Figure 10</a>) with regular updates. It can facilitate ongoing monitoring of overall sales conditions, streamline data storage and analysis, and improve decision making efficiency.</li>
+  <li>Order volumes are considerably higher during daytime hours on weekends (9 AM to 5 PM). Therefore, it is recommended that the company allocates more drivers during these peak hours by adjusting delivery fees. This would ensure sufficient driver availability and timely order deliveries, leading to increased customer satisfaction and loyalty. </li>
+  <li>The majority of orders (~48%) are placed more than 7 days after the customer's last order. To encourage more frequent purchase, it is suggested that the company utilizes targeted strategies to increase customer loyalty and drive repeat business. For example, coupons, discounts and free shipping can be offered to customers whose second order exceeds a certain amount within a week. </li>
+  <li>Among the top 20 products, 14 (~75%) are organic. Organic products also have higher reorder rates compared to non-organic products. Given the growing demand for healthier food options, the company should consider increasing the visibility of organic products across its websites and mobile applications. </li>
+  <li>The company may consider building a dynamic dashboard based on the treemap (<a href="#treemap">Figure 10</a>) with regular updates. It can facilitate ongoing monitoring of overall sales conditions, streamline data storage and analysis, and improve decision making efficiency. </li>
 </ol>
 
 
 ## Data Preprocessing
-The original datasets were obtained from Kaggle.There are five original datasets, which respectively contain information on order information, products purchased in each order, product information, department information and aisle information from Instacart, a grocery delivery service. 
+The original datasets were obtained from Kaggle. There are five original datasets, which respectively contain information on order information, products purchased in each order, product information, department information and aisle information from Instacart, a grocery delivery service. 
 <br/><br/>
 During dataset joining, there seems to be a problem of mismatched numbers of rows between datasets, which may indicate many-to-one or duplicate issues. After investigating the unique values in datasets that contain department and aisle information, two departments and three aisles with repetitive ids and unreasonable names were dropped. It is more common to reach out to data providers when dealing with this kind of issue in practice, but here intuition works just fine since stores probably do not sell “illegal drugs” or “nuclear missiles”.
 <br/><br/>
@@ -83,7 +85,7 @@ Looking closer at the individual subpopulations, it's worth noting that only abo
 <p style="font-size:85%;">Figure 5: Probability Density Histogram of Second Order Size relative to individual subpopulations. Orders are divided into three subpopulations by time since last order: “Same day” (<code>day_since_prior_order</code> = 0), “Within a week” (0 < <code>day_since_prior_order</code> <= 7), and “More than a week” (<code>day_since_prior_order</code> > 7). Distribution of order size of the subpopulations can be found in the <a href="#appendix">appendix</a>.</p>
 
 ### Product
-As for individual products, the most ordered product is banana.The top 20 products with highest volume percentages are all from the `produce` and `dairy eggs` departments. Produce and vegetables expire much quicker than the other product offerings and are more commonly in everyday dishes/meals which aligns with what might be expected. Among the top 20 products, 14 (~75%) are organic. Furthermore, organic products have higher reorder rates compared to non-organic products.
+As for individual products, the most ordered product is banana. The top 20 products with highest volume percentages are all from the `produce` and `dairy eggs` departments. Produce and vegetables expire much quicker than the other product offerings and are more commonly in everyday dishes/meals which aligns with what might be expected. Among the top 20 products, 14 (~75%) are organic. Furthermore, organic products have higher reorder rates compared to non-organic products.
 
 **With the increasing trend towards natural and healthy foods, this presents a promising opportunity for the company to explore further. For instance, the company could enhance its promotion of organic products by increasing their visibility on its websites and apps.**
 
