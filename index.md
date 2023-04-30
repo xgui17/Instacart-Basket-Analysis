@@ -4,7 +4,7 @@ layout: minimal
 ---
 
 <style>
-  .box { display: flex; }
+  .box { display: inline-block; }
   .left {align: left; }
   .right {align: right; }
 </style>
