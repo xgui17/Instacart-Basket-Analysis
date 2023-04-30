@@ -11,7 +11,7 @@ layout: minimal
   width:50%; }
 </style>
 
-# 🏪🛒 Instacart Market Basket Analysis 
+# 🏪 Instacart Market Basket Analysis 
 {:.no_toc}
 
 
@@ -57,7 +57,7 @@ There are also some messy entries of aisle names. Necessary actions have been do
 
 
 ## 🧐 Exploratory Data Analysis 
-### Customer Behavior 
+### 🛒 Customer Behavior 
 
 <iframe src="assets/num_orders_per_user_1" width="100%" height=530  frameBorder=0></iframe>
 <p style="font-size:85%;text-align:center;">Figure 1: Distribution of Number of Orders Per User</p>
@@ -105,7 +105,7 @@ Looking closer at the individual subpopulations, it's worth noting that only abo
 **As a result, to encourage customers who place orders more than a week apart to shift into the "within a week" category, it is recommended that marketing, sales, and other relevant departments collaborate to develop targeted strategies. One approach could be to offer coupons, discounts, or free shipping for customers whose second order exceeds a certain amount within a week.**
 
 
-### Product
+### 🍌 Product
 As for individual products, the most ordered product is banana. The top 20 products with highest volume percentages are all from the `produce` and `dairy eggs` departments. Produce and vegetables expire much quicker than the other product offerings and are more commonly in everyday dishes/meals which aligns with what might be expected. Among the top 20 products, 14 (~75%) are organic. Furthermore, organic products have higher reorder rates compared to non-organic products.
 
 **With the increasing trend towards natural and healthy foods, this presents a promising opportunity for the company to explore further. For instance, the company could enhance its promotion of organic products by increasing their visibility on its websites and apps.**
