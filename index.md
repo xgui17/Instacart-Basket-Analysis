@@ -3,6 +3,10 @@ title: Instacart Market Basket Analysis
 layout: minimal
 ---
 
+<style>
+  .box { display:inline-block; }
+</style>
+
 # 🛒 Instacart Market Basket Analysis 
 {:.no_toc}
 
@@ -57,26 +61,40 @@ There are also some messy entries of aisle names. Necessary actions have been do
 There are approximately 200k users, 3.2 million orders and 50k unique product offerings according to the dataset. As is demonstrated in Figure 1, the number of orders per user has a negative exponential distribution. Around 29% of users placed orders 1-5 times, about 25% of users placed orders 6-10 times, and no more than 9% of users had ordered more than 40 times. There is a peak at 99 orders per user, which may indicate potential data issues.
 
 <iframe src="assets/dow_tod_heatmap_2" width="100%" height=530  frameBorder=0></iframe>
-<p style="font-size:85%;text-align:center;">Figure 2: Heatmap of Order Volume by Day of Week and Time of Day</p>
+<p style="font-size:85%;text-align:center;">Figure 2-1: Heatmap of Order Volume by Day of Week and Time of Day</p>
 
-According to Figure 2, more than 34% of the orders are placed on Saturday and Sunday, and about 72% of orders were placed during daytime hours (i.e. 9 AM to 5 PM), which aligns with normal working hours.
-
-Note: The day of week in the original dataset is marked with mere numbers from 0 to 6. This analysis assumes that day 0 is Saturday and day 1 is Sunday given that people tend to shop for groceries more on weekends. Another point to note is that day 2 has the most orders among the rest of the days. Such a phenomenon supports the above assumption of days of weeks because intuitively people are likely to shop for what they’ve missed in weekend shopping on Monday. <u>A follow up with data providers would still be helpful.</u>
+According to Figure 2-1, more than 34% of the orders are placed on Saturday and Sunday, and about 72% of orders were placed during daytime hours (i.e. 9 AM to 5 PM), which aligns with normal working hours.
 
 **Therefore, it is recommended that the company increase the delivery fee during peak hours, specifically from 9 AM to 5 PM on weekends, to ensure an adequate number of available drivers. Such an approach would guarantee timely order deliveries and  increase customer satisfaction and loyalty.**
 
-<br/><br/>
+<div class="box">
+<iframe src="assets/dow_bar_11" height=280 frameBorder=0></iframe>
+<p style="font-size:85%;text-align:center;">Figure 2-2: Distribution of Orders by Day of Week</p>
+</div>
 
-As for the number of products per order, Figure 3 indicates that over 62% of orders contain no more than 10 products, and less than 10% of orders have more than 20 items.
+<div class="box">
+<iframe src="assets/tod_bar_12" height=280 frameBorder=0></iframe>
+<p style="font-size:85%;text-align:center;">Figure 2-3: Distribution of Orders by Time of Day</p>
+</div>
+
+Note: The day of week in the original dataset is marked with mere numbers from 0 to 6. This analysis assumes that day 0 is Saturday and day 1 is Sunday given that people tend to shop for groceries more on weekends. Another point to note is that day 2 has the most orders among the rest of the days. Such a phenomenon supports the above assumption of days of weeks because intuitively people are likely to shop for what they’ve missed in weekend shopping on Monday. More details are shown in figure 2-2 and 2-3. <u>A follow up with data providers would still be helpful.</u>
+
+<br/><br/>
 
 <iframe src="assets/order_size_hist_3" width="100%" height=530  frameBorder=0></iframe>
 <p style="font-size:85%;text-align:center;">Figure 3: Distribution of Order size</p>
 
-When looking closely at Figure 4, the distribution of the number of days customers placed their prior order, there seems to be a weekly user cycle since there’s a peak every seven days. <u>There is a peak on day 30, which probably implies that the data maintainer aggregates any data larger than 30 into that bin. A follow up investigation is needed.</u>
+As for the number of products per order, Figure 3 indicates that over 62% of orders contain no more than 10 products, and less than 10% of orders have more than 20 items.
+
+<br/><br/>
 
 <iframe src="assets/day_since_prior_order_4" width="100%" height=530  frameBorder=0></iframe>
 <p style="font-size:85%;text-align:center;">Figure 4: Distribution of Day Since Prior Order</p>
 
+When looking closely at Figure 4, the distribution of the number of days customers placed their prior order, there seems to be a weekly user cycle since there’s a peak every seven days. <u>There is a peak on day 30, which probably implies that the data maintainer aggregates any data larger than 30 into that bin. A follow up investigation is needed.</u>
+
+<iframe src="assets/second_order_size_5" width="100%" height=530  frameBorder=0></iframe>
+<p style="font-size:85%;">Figure 5: Probability Density Histogram of Second Order Size relative to individual subpopulations. Orders are divided into three subpopulations by time since last order: “Same day” (<code>day_since_prior_order</code> = 0), “Within a week” (0 < <code>day_since_prior_order</code> <= 7), and “More than a week” (<code>day_since_prior_order</code> > 7). Distribution of order size of the subpopulations can be found in the <a href="#appendix">appendix</a>.
 
 When comparing the distribution of order size across subpopulations with varying time intervals since the prior order, as shown in Figure 5, there seem to be more small-sized second orders placed on the same day, which indicates that people who reordered on the same day may just forget a thing or two.
 
@@ -84,8 +102,7 @@ Looking closer at the individual subpopulations, it's worth noting that only abo
 
 **As a result, to encourage customers who place orders more than a week apart to shift into the "within a week" category, it is recommended that marketing, sales, and other relevant departments collaborate to develop targeted strategies. One approach could be to offer coupons, discounts, or free shipping for customers whose second order exceeds a certain amount within a week.**
 
-<img src="assets/second_order_size_5.png" alt="Probability Histogram of Second Order Size" width="100%" height="450">
-<p style="font-size:85%;">Figure 5: Probability Density Histogram of Second Order Size relative to individual subpopulations. Orders are divided into three subpopulations by time since last order: “Same day” (<code>day_since_prior_order</code> = 0), “Within a week” (0 < <code>day_since_prior_order</code> <= 7), and “More than a week” (<code>day_since_prior_order</code> > 7). Distribution of order size of the subpopulations can be found in the <a href="#appendix">appendix</a>.</p>
+</p>
 
 ### Product
 As for individual products, the most ordered product is banana. The top 20 products with highest volume percentages are all from the `produce` and `dairy eggs` departments. Produce and vegetables expire much quicker than the other product offerings and are more commonly in everyday dishes/meals which aligns with what might be expected. Among the top 20 products, 14 (~75%) are organic. Furthermore, organic products have higher reorder rates compared to non-organic products.
@@ -243,18 +260,14 @@ Extra information:
 
 With these questions answered, it is possible to further enhance the insights provided above.
 
-## Appendix
-<iframe src="assets/dow_bar_11" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p style="font-size:85%;text-align:center;">Figure 11: Distribution of Orders by Day of Week</p>
+<!-- ## Appendix -->
 
-<iframe src="assets/tod_bar_12" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p style="font-size:85%;text-align:center;">Figure 12: Distribution of Orders by Time of Day</p>
 
-<iframe src="assets/size_sub1_13" id="treemap" width="100%" height=530  frameBorder=0></iframe>
+<!-- <iframe src="assets/size_sub1_13" id="treemap" width="100%" height=530  frameBorder=0></iframe>
 <p style="font-size:85%;text-align:center;">Figure 13: Size of Second Order - Same day</p>
 
 <iframe src="assets/size_sub2_14" id="treemap" width="100%" height=530  frameBorder=0></iframe>
 <p style="font-size:85%;text-align:center;">Figure 14: Size of Second Order - Within a week</p>
 
 <iframe src="assets/size_sub3_15" id="treemap" width="100%" height=530  frameBorder=0></iframe>
-<p style="font-size:85%;text-align:center;">Figure 15: Size of Second Order - More than a week</p>
+<p style="font-size:85%;text-align:center;">Figure 15: Size of Second Order - More than a week</p> -->
