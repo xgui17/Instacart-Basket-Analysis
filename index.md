@@ -11,7 +11,7 @@ layout: minimal
   width:50%; }
 </style>
 
-# 🛒 Instacart Market Basket Analysis 
+# 🏪🛒 Instacart Market Basket Analysis 
 {:.no_toc}
 
 
@@ -23,7 +23,7 @@ layout: minimal
 
 ---
 
-## Summary and Business Recommendations
+## 🧾 Summary and Business Recommendations
 
 <ol>
   <li>Order volumes are considerably higher during daytime hours on weekends (9 AM to 5 PM). Therefore, it is recommended that the company allocates more drivers during these peak hours by adjusting delivery fees. This would ensure sufficient driver availability and timely order deliveries, leading to increased customer satisfaction and loyalty. </li>
@@ -33,7 +33,7 @@ layout: minimal
 </ol>
 
 
-## Data Preprocessing
+## 🧽 Data Preprocessing
 The original datasets were obtained from Kaggle. There are five original datasets, which respectively contain information on order information, products purchased in each order, product information, department information and aisle information from Instacart, a grocery delivery service. 
 <br/><br/>
 During dataset joining, there seems to be a problem of mismatched numbers of rows between datasets, which may indicate many-to-one or duplicate issues. After investigating the unique values in datasets that contain department and aisle information, two departments and three aisles with repetitive ids and unreasonable names were dropped. It is more common to reach out to data providers when dealing with this kind of issue in practice, but here intuition works just fine since stores probably do not sell “illegal drugs” or “nuclear missiles”.
@@ -56,7 +56,7 @@ There are also some messy entries of aisle names. Necessary actions have been do
 <p style="font-size:85%;text-align:center;">Table 1: Example of Data Cleaning Process</p>
 
 
-## Exploratory Data Analysis 
+## 🧐 Exploratory Data Analysis 
 ### Customer Behavior 
 
 <iframe src="assets/num_orders_per_user_1" width="100%" height=530  frameBorder=0></iframe>
@@ -96,7 +96,7 @@ As for the number of products per order, Figure 3 indicates that over 62% of ord
 When looking closely at Figure 4, the distribution of the number of days customers placed their prior order, there seems to be a weekly user cycle since there’s a peak every seven days. <u>There is a peak on day 30, which probably implies that the data maintainer aggregates any data larger than 30 into that bin. A follow up investigation is needed.</u>
 
 <iframe src="assets/second_order_size_5" width="100%" height=530  frameBorder=0></iframe>
-<p style="font-size:85%;">Figure 5: Probability Density Histogram of Second Order Size relative to individual subpopulations. Orders are divided into three subpopulations by time since last order: “Same day” (<code>day_since_prior_order</code> = 0), “Within a week” (0 < <code>day_since_prior_order</code> <= 7), and “More than a week” (<code>day_since_prior_order</code> > 7). Distribution of order size of the subpopulations can be found in the <a href="#appendix">appendix</a>.
+<p style="font-size:85%;">Figure 5: Probability Density Histogram of Second Order Size relative to individual subpopulations. Orders are divided into three subpopulations by time since last order: “Same day” (<code>day_since_prior_order</code> = 0), “Within a week” (0 < <code>day_since_prior_order</code> <= 7), and “More than a week” (<code>day_since_prior_order</code> > 7). </p>
 
 When comparing the distribution of order size across subpopulations with varying time intervals since the prior order, as shown in Figure 5, there seem to be more small-sized second orders placed on the same day, which indicates that people who reordered on the same day may just forget a thing or two.
 
@@ -104,7 +104,6 @@ Looking closer at the individual subpopulations, it's worth noting that only abo
 
 **As a result, to encourage customers who place orders more than a week apart to shift into the "within a week" category, it is recommended that marketing, sales, and other relevant departments collaborate to develop targeted strategies. One approach could be to offer coupons, discounts, or free shipping for customers whose second order exceeds a certain amount within a week.**
 
-</p>
 
 ### Product
 As for individual products, the most ordered product is banana. The top 20 products with highest volume percentages are all from the `produce` and `dairy eggs` departments. Produce and vegetables expire much quicker than the other product offerings and are more commonly in everyday dishes/meals which aligns with what might be expected. Among the top 20 products, 14 (~75%) are organic. Furthermore, organic products have higher reorder rates compared to non-organic products.
@@ -223,7 +222,6 @@ As for individual products, the most ordered product is banana. The top 20 produ
 
 In Figure 6 and Figure 7, the most reordered ones are mostly food, drinks, and personal care items, which are the ones that get used up pretty quickly.
 
-
 <div class="box">
   <iframe class="left" src="assets/dept_reorder_6" height=500 frameBorder=0></iframe>
   <iframe class="right" src="assets/aisle_reorder_7" height=500 frameBorder=0></iframe>
@@ -248,7 +246,7 @@ The treemap below (Figure 10) provides a visual representation of order volumes 
 <p style="font-size:90%;">Figure 10: Treemap of Department and Aisles, sized by order volumes and colored by reorder rates. More detailed data can be found by hovering over the cells.</p>
 
 
-## Future work
+## 📝 Future work
 The questions that require follow up with the data providers include the following:
 
 Improvement to data quality:
