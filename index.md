@@ -76,10 +76,10 @@ According to Figure 2-1, more than 34% of the orders are placed on Saturday and 
   <iframe class="right" src="assets/tod_bar_12" height=500 frameBorder=0></iframe>
 </div>
 
-<!-- <div class="box">
-<p style="font-size:85%;text-align:center;">Figure 2-2: Distribution of Orders by Day of Week</p>
-<p style="font-size:85%;text-align:center;">Figure 2-3: Distribution of Orders by Time of Day</p>
-</div> -->
+<div class="box">
+<p class="left" style="font-size:85%;text-align:center;">Figure 2-2: Distribution of Orders by Day of Week</p>
+<p class="right" style="font-size:85%;text-align:center;">Figure 2-3: Distribution of Orders by Time of Day</p>
+</div>
 
 Note: The day of week in the original dataset is marked with mere numbers from 0 to 6. This analysis assumes that day 0 is Saturday and day 1 is Sunday given that people tend to shop for groceries more on weekends. Another point to note is that day 2 has the most orders among the rest of the days. Such a phenomenon supports the above assumption of days of weeks because intuitively people are likely to shop for what they’ve missed in weekend shopping on Monday. More details are shown in figure 2-2 and 2-3. <u>A follow up with data providers would still be helpful.</u>
 
