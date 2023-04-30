@@ -74,12 +74,10 @@ According to Figure 2-1, more than 34% of the orders are placed on Saturday and 
 <div class="box">
   <iframe class="left" src="assets/dow_bar_11" height=500 frameBorder=0></iframe>
   <iframe class="right" src="assets/tod_bar_12" height=500 frameBorder=0></iframe>
+  <p class="left" style="font-size:85%;text-align:center;">Figure 2-2: Distribution of Orders by Day of Week</p>
+  <p class="right" style="font-size:85%;text-align:center;">Figure 2-3: Distribution of Orders by Time of Day</p>
 </div>
 
-<div class="box">
-<p class="left" style="font-size:85%;text-align:center;">Figure 2-2: Distribution of Orders by Day of Week</p>
-<p class="right" style="font-size:85%;text-align:center;">Figure 2-3: Distribution of Orders by Time of Day</p>
-</div>
 
 Note: The day of week in the original dataset is marked with mere numbers from 0 to 6. This analysis assumes that day 0 is Saturday and day 1 is Sunday given that people tend to shop for groceries more on weekends. Another point to note is that day 2 has the most orders among the rest of the days. Such a phenomenon supports the above assumption of days of weeks because intuitively people are likely to shop for what they’ve missed in weekend shopping on Monday. More details are shown in figure 2-2 and 2-3. <u>A follow up with data providers would still be helpful.</u>
 
@@ -225,11 +223,14 @@ As for individual products, the most ordered product is banana. The top 20 produ
 
 In Figure 6 and Figure 7, the most reordered ones are mostly food, drinks, and personal care items, which are the ones that get used up pretty quickly.
 
-<iframe src="assets/dept_reorder_6" width="100%" height=530  frameBorder=0></iframe>
-<p style="font-size:85%;text-align:center;">Figure 6: Department Reorder Rates</p>
 
-<iframe src="assets/aisle_reorder_7" width="100%" height=530  frameBorder=0></iframe>
-<p style="font-size:85%;text-align:center;">Figure 7: Aisle Reorder Rates</p>
+<div class="box">
+  <iframe class="left" src="assets/dept_reorder_6" height=500 frameBorder=0></iframe>
+  <iframe class="right" src="assets/aisle_reorder_7" height=500 frameBorder=0></iframe>
+  <p class="left" style="font-size:85%;text-align:center;">Figure 6: Department Reorder Rates</p>
+  <p class="right" style="font-size:85%;text-align:center;">Figure 7: Aisle Reorder Rates</p>
+</div>
+
 
 According to Figure 8, the department with the largest order volume is `produce`. The `other` category in the pie chart is made up of departments with less than 2% of total order volumes, which includes `personal care`, `babies`, `international`, `alcohol`, `pets`, `missing`, `other` and `bulk`. 
 
