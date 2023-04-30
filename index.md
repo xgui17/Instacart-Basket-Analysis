@@ -4,9 +4,11 @@ layout: minimal
 ---
 
 <style>
-  .box { display: inline-block; }
-  /* .left {align: left; }
-  .right {align: right; } */
+  /* .box { display: inline-block; } */
+  .left {float:left;
+  width:50%; }
+  .right {float:left;
+  width:50%; }
 </style>
 
 # 🛒 Instacart Market Basket Analysis 
@@ -70,8 +72,8 @@ According to Figure 2-1, more than 34% of the orders are placed on Saturday and 
 **Therefore, it is recommended that the company increase the delivery fee during peak hours, specifically from 9 AM to 5 PM on weekends, to ensure an adequate number of available drivers. Such an approach would guarantee timely order deliveries and  increase customer satisfaction and loyalty.**
 
 <div class="box">
-  <iframe align="left" src="assets/dow_bar_11" height=500 frameBorder=0></iframe>
-  <iframe align="right" src="assets/tod_bar_12" height=500 frameBorder=0></iframe>
+  <iframe class="left" src="assets/dow_bar_11" height=500 frameBorder=0></iframe>
+  <iframe class="right" src="assets/tod_bar_12" height=500 frameBorder=0></iframe>
 </div>
 
 <!-- <div class="box">
