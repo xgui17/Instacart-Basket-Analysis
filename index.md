@@ -50,19 +50,22 @@ There are also some messy entries of aisle names. Necessary actions have been do
 
 ## Exploratory Data Analysis 
 ### Customer Behavior 
-There are approximately 200k users, 3.2 million orders and 50k unique product offerings according to the dataset. As is demonstrated in Figure 1, the number of orders per user has a negative exponential distribution. Around 29% of users placed orders 1-5 times, about 25% of users placed orders 6-10 times, and no more than 9% of users had ordered more than 40 times. There is a peak at 99 orders per user, which may indicate potential data issues.
 
 <iframe src="assets/num_orders_per_user_1" width="100%" height=530  frameBorder=0></iframe>
 <p style="font-size:85%;text-align:center;">Figure 1: Distribution of Number of Orders Per User</p>
 
-According to Figure 2, more than 34% of the orders are placed on day 0 and day 1, and about 72% of orders were placed during daytime hours (i.e. 9 AM to 5 PM), which aligns with normal working hours.
-
-Note: This analysis assumes that day 0 is Saturday and day 1 is Sunday given that people tend to shop for groceries more on weekends. Another point to note is that day 2 has the most orders among the rest of the days. Such a phenomenon supports the above assumption of days of weeks because intuitively people are likely to shop for what they’ve missed in weekend shopping on Monday. <u>A follow up with data providers would still be helpful.</u>
-
-**Therefore, it is recommended that the company increase the delivery fee during peak hours, specifically from 9 AM to 5 PM on weekends, to ensure an adequate number of available drivers. Such an approach would guarantee timely order deliveries and  increase customer satisfaction and loyalty.**
+There are approximately 200k users, 3.2 million orders and 50k unique product offerings according to the dataset. As is demonstrated in Figure 1, the number of orders per user has a negative exponential distribution. Around 29% of users placed orders 1-5 times, about 25% of users placed orders 6-10 times, and no more than 9% of users had ordered more than 40 times. There is a peak at 99 orders per user, which may indicate potential data issues.
 
 <iframe src="assets/dow_tod_heatmap_2" width="100%" height=530  frameBorder=0></iframe>
 <p style="font-size:85%;text-align:center;">Figure 2: Heatmap of Order Volume by Day of Week and Time of Day</p>
+
+According to Figure 2, more than 34% of the orders are placed on Saturday and Sunday, and about 72% of orders were placed during daytime hours (i.e. 9 AM to 5 PM), which aligns with normal working hours.
+
+Note: The day of week in the original dataset is marked with mere numbers from 0 to 6. This analysis assumes that day 0 is Saturday and day 1 is Sunday given that people tend to shop for groceries more on weekends. Another point to note is that day 2 has the most orders among the rest of the days. Such a phenomenon supports the above assumption of days of weeks because intuitively people are likely to shop for what they’ve missed in weekend shopping on Monday. <u>A follow up with data providers would still be helpful.</u>
+
+**Therefore, it is recommended that the company increase the delivery fee during peak hours, specifically from 9 AM to 5 PM on weekends, to ensure an adequate number of available drivers. Such an approach would guarantee timely order deliveries and  increase customer satisfaction and loyalty.**
+
+<br/><br/>
 
 As for the number of products per order, Figure 3 indicates that over 62% of orders contain no more than 10 products, and less than 10% of orders have more than 20 items.
 
