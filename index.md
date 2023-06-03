@@ -13,6 +13,7 @@ layout: minimal
 
 # 🏪 Instacart Market Basket Analysis 
 {:.no_toc}
+<p>By Xiaoyu Gui</p>
 
 
 ## Table of contents
